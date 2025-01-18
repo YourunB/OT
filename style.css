@@ -95,8 +95,8 @@ header img:active {
   top: 0;
   transition: 0.7s;
   outline: none;
-  background: none;
   color: white;
+  background: none;
   border: solid 2px white;
   border-radius: 3px;
   font-weight: 700;
