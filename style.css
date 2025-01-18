@@ -20,17 +20,18 @@ a {
 body {
   padding: 10px;
   margin: 0;
-  background: url('./public/favicon.png') no-repeat center;
   background-size: 200px;
 }
 
 header {
   gap: 10px;
   height: 140px;
+  user-select: none;
 }
 
 .logo-box {
   display: flex;
+  gap: 10px;
   align-items: center;
 }
 
@@ -40,8 +41,22 @@ main {
   overflow-y: auto;
 }
 
+.main-logo {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: show-image 1s ease-out forwards;
+  max-width: 200px;
+  width: 100%;
+  user-select: none;
+}
+
 footer {
   height: 20px;
+  user-select: none;
 }
 
 footer a {
@@ -150,4 +165,16 @@ header img:active {
 }
 *::-webkit-scrollbar-thumb:active {
   background-color: rgb(255, 255, 255);
+}
+
+@keyframes show-image {
+  0% {
+    scale: 0;
+    opacity: 0;
+    rotate: -360deg;
+  }
+  100% {
+    rotate: 1;
+    opacity: 1;
+  }
 }

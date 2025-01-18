@@ -26,7 +26,12 @@ const getAnswer = () => {
 	
 	for (let i = 0; i < data.length; i += 1) {
 		if (data[i].question.toLowerCase().indexOf(chars) !== -1 || data[i].ticket.toLowerCase().indexOf(chars) !== -1) {
-			result += `\nБИЛЕТ: ${data[i].ticket}\nВОПРОС: ${data[i].question}\nОТВЕТ: ${data[i].answer}\n`;
+			result += `
+        \nБИЛЕТ:\n ${data[i].ticket}
+        \nВОПРОС:\n ${data[i].question}
+        \nОТВЕТ:\n ${data[i].answer}
+        \n
+      `;
 		}
 	}
 
