@@ -20,6 +20,8 @@ a {
 body {
   padding: 10px;
   margin: 0;
+  background: url('./public/favicon.png') no-repeat center;
+  background-size: 200px;
 }
 
 header {
@@ -108,14 +110,11 @@ header img:active {
   padding: 5px 35px 5px 5px;
 }
 
-p {
-  color: rgb(255, 255, 190);
-  font-weight: 700;
-}
-
 .answer {
   padding: 0;
   margin: 0;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px 20px black;
 }
 
 .answer_last {
@@ -123,7 +122,8 @@ p {
 }
 
 .answer span {
-  color: white;
+  font-weight: 700;
+  color: rgb(13, 170, 205);
 }
 
 *::-webkit-scrollbar {

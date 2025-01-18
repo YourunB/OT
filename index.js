@@ -25,16 +25,12 @@ const getAnswer = () => {
 	let result = "";
 	
 	for (let i = 0; i < data.length; i += 1) {
-		if (data[i].question.toLowerCase().indexOf(chars) !== -1) {
-			result += `
-        <p class="answer"><span>БИЛЕТ:</span> ${data[i].ticket}</p>
-        <p class="answer"><span>ВОПРОС:</span> ${data[i].question}</p>
-        <p class="answer answer_last"><span>ОТВЕТ:</span> ${data[i].answer}</p>
-      `;
+		if (data[i].question.toLowerCase().indexOf(chars) !== -1 || data[i].ticket.toLowerCase().indexOf(chars) !== -1) {
+			result += `\nБИЛЕТ: ${data[i].ticket}\nВОПРОС: ${data[i].question}\nОТВЕТ: ${data[i].answer}\n`;
 		}
 	}
 
-	if (chars.length > 0) answer.innerHTML = result;
+	if (chars.length > 0) answer.innerText = result;
 	else answer.innerText = '';
 }
 
