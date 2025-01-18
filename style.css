@@ -3,12 +3,18 @@ html {
   color: white;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 body {
@@ -20,6 +26,21 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 110px;
+}
+
+main {
+  height: calc(100dvh - 150px);
+}
+
+footer {
+  height: 20px;
+}
+
+footer a {
+  display: block;
+  width: 100%;
+  text-align: right;
 }
 
 header img {
